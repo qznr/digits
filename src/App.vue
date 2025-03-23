@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue';
 import Canvas from './components/Canvas.vue';  // Make sure the path is correct
 import * as ort from 'onnxruntime-web';
 
-ort.env.wasm.wasmPaths = '/src/assets/'; // Or wherever your WASM files are
+// ort.env.wasm.wasmPaths = '/'; // Or wherever your WASM files are
 
 
 const imageData = ref(new Array(28 * 28).fill(0)); // Initialize with white
