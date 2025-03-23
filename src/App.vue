@@ -14,7 +14,7 @@ const logits = ref(new Array(10).fill(0)); // Store the logits
 // Load the ONNX model
 onMounted(async () => {
     try {
-        session.value = await ort.InferenceSession.create('/models/mnist_cnn.onnx'); // Adjust path if needed
+        session.value = await ort.InferenceSession.create(`${import.meta.env.BASE_URL}models/mnist_cnn.onnx`);
     } catch (e) {
         console.error("Failed to load model:", e);
         alert('Failed to load the model.'); // More user-friendly error
